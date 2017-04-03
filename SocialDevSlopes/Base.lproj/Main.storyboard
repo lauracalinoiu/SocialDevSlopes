@@ -80,13 +80,13 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="hFc-I3-tUP">
                                 <rect key="frame" x="26" y="350" width="268" height="123"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Ep-Ji-Fk5" customClass="FancyField">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Ep-Ji-Fk5">
                                         <rect key="frame" x="0.0" y="0.0" width="268" height="34.5"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="W6H-gE-lK9" customClass="FancyField">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="W6H-gE-lK9">
                                         <rect key="frame" x="0.0" y="44.5" width="268" height="34"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -129,11 +129,46 @@
                     <connections>
                         <outlet property="emailField" destination="3Ep-Ji-Fk5" id="oIO-nN-2n2"/>
                         <outlet property="passField" destination="W6H-gE-lK9" id="byV-kJ-EQK"/>
+                        <segue destination="ffe-RN-6Sa" kind="showDetail" identifier="goToFeed" action="showViewController:sender:" id="iFG-iv-nE2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="135" y="138.38028169014083"/>
+        </scene>
+        <!--FeedVC-->
+        <scene sceneID="bQc-dM-zCB">
+            <objects>
+                <viewController id="ffe-RN-6Sa" customClass="FeedVC" customModule="SocialDevSlopes" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VvI-8c-2q2"/>
+                        <viewControllerLayoutGuide type="bottom" id="5mA-Ka-ihG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tdu-xE-51r">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DWJ-cp-lNo">
+                                <rect key="frame" x="135" y="269" width="51" height="30"/>
+                                <state key="normal" title="signout"/>
+                                <connections>
+                                    <action selector="signoutTapped:" destination="ffe-RN-6Sa" eventType="touchUpInside" id="f7n-4f-0Tk"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.99902135133743286" green="0.9228711724281311" blue="0.23089337348937988" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="DWJ-cp-lNo" firstAttribute="centerX" secondItem="tdu-xE-51r" secondAttribute="centerX" id="R44-0r-eU0"/>
+                            <constraint firstItem="DWJ-cp-lNo" firstAttribute="centerY" secondItem="tdu-xE-51r" secondAttribute="centerY" id="gwO-T9-Fyc"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="showDetail" identifier="backToSignin" id="Yue-93-FLe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="doZ-4y-FnJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="968" y="138"/>
         </scene>
     </scenes>
     <resources>

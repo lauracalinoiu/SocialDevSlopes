@@ -14,6 +14,8 @@
 		5B420FE21E8E293B006A257E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B420FE01E8E293B006A257E /* LaunchScreen.storyboard */; };
 		5B420FEA1E8E298E006A257E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5B420FE91E8E298E006A257E /* GoogleService-Info.plist */; };
 		5BA7C96A1E926ADE00D5F315 /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA7C9691E926ADE00D5F315 /* ShadowView.swift */; };
+		5BA7C96C1E92768A00D5F315 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA7C96B1E92768A00D5F315 /* Constants.swift */; };
+		5BA7C96E1E927AF800D5F315 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA7C96D1E927AF800D5F315 /* FeedVC.swift */; };
 		B398D25BAE680E5077D10301 /* Pods_SocialDevSlopes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E5AF368F4D17450C6AAF7B8 /* Pods_SocialDevSlopes.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +31,8 @@
 		5B420FE91E8E298E006A257E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5BA7C9681E9238E400D5F315 /* SocialDevSlopes.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SocialDevSlopes.entitlements; sourceTree = "<group>"; };
 		5BA7C9691E926ADE00D5F315 /* ShadowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
+		5BA7C96B1E92768A00D5F315 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = ../Constants.swift; sourceTree = "<group>"; };
+		5BA7C96D1E927AF800D5F315 /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
 		B3B071F1359331602731B757 /* Pods-SocialDevSlopes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialDevSlopes.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SocialDevSlopes/Pods-SocialDevSlopes.debug.xcconfig"; sourceTree = "<group>"; };
 		FCAF6E34BFA5172B12B295C4 /* Pods-SocialDevSlopes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialDevSlopes.release.xcconfig"; path = "Pods/Target Support Files/Pods-SocialDevSlopes/Pods-SocialDevSlopes.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -71,6 +75,7 @@
 				5BA7C9571E8E2C9C00D5F315 /* View */,
 				5BA7C9581E8E2CAA00D5F315 /* Controller */,
 				5B420FDB1E8E293B006A257E /* Main.storyboard */,
+				5BA7C96B1E92768A00D5F315 /* Constants.swift */,
 				5B420FD71E8E293B006A257E /* AppDelegate.swift */,
 				5B420FDE1E8E293B006A257E /* Assets.xcassets */,
 				5B420FE01E8E293B006A257E /* LaunchScreen.storyboard */,
@@ -99,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				5B420FD91E8E293B006A257E /* SignInVC.swift */,
+				5BA7C96D1E927AF800D5F315 /* FeedVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -252,7 +258,9 @@
 			files = (
 				5BA7C96A1E926ADE00D5F315 /* ShadowView.swift in Sources */,
 				5B420FDA1E8E293B006A257E /* SignInVC.swift in Sources */,
+				5BA7C96E1E927AF800D5F315 /* FeedVC.swift in Sources */,
 				5B420FD81E8E293B006A257E /* AppDelegate.swift in Sources */,
+				5BA7C96C1E92768A00D5F315 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

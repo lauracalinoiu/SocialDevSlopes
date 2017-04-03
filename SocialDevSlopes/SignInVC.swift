@@ -10,14 +10,18 @@ import UIKit
 import FacebookLogin
 import FacebookCore
 import Firebase
+import SwiftKeychainWrapper
 
 class SignInVC: UIViewController {
     
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passField: UITextField!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        if let _ = KeychainWrapper.standard.string(forKey: KEY_UID) {
+            performSegue(withIdentifier: "goToFeed", sender: nil)
+        }
     }
     
     @IBAction func facebookBtnTapped(_ sender: UIButton) {
@@ -39,8 +43,11 @@ class SignInVC: UIViewController {
     func firebaseAuthenticate(_ credential: FIRAuthCredential) {
         FIRAuth.auth()?.signIn(with: credential, completion: { (user, error) in
             guard error == nil else { print("Unable to authenticate with Firebase!" )
-                                    return }
+                return }
             print("Succesfully authenticated with firebase")
+            if let user = user {
+                self.completeSignIn(user.uid)
+            }
         })
     }
     
@@ -53,13 +60,24 @@ class SignInVC: UIViewController {
                             print("Unable to authenticate with Firebase using email")
                         } else {
                             print("Succesfully authenticated with Firebase")
+                            if let user = user {
+                                self.completeSignIn(user.uid)
+                            }
                         }
                     }
                     return
                 }
                 print("Email user authenticated with Firebase")
+                if let user = user {
+                    self.completeSignIn(user.uid)
+                }
             }
         }
     }
- }
+    
+    func completeSignIn(_ id: String) {
+        KeychainWrapper.standard.set(id, forKey: KEY_UID)
+        performSegue(withIdentifier: "goToFeed", sender: nil)
+    }
+}
 
