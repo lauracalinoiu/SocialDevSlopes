@@ -26,6 +26,7 @@
 		5B420FE11E8E293B006A257E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5B420FE31E8E293B006A257E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5B420FE91E8E298E006A257E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		5BA7C9681E9238E400D5F315 /* SocialDevSlopes.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SocialDevSlopes.entitlements; sourceTree = "<group>"; };
 		B3B071F1359331602731B757 /* Pods-SocialDevSlopes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialDevSlopes.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SocialDevSlopes/Pods-SocialDevSlopes.debug.xcconfig"; sourceTree = "<group>"; };
 		FCAF6E34BFA5172B12B295C4 /* Pods-SocialDevSlopes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialDevSlopes.release.xcconfig"; path = "Pods/Target Support Files/Pods-SocialDevSlopes/Pods-SocialDevSlopes.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -63,6 +64,7 @@
 		5B420FD61E8E293B006A257E /* SocialDevSlopes */ = {
 			isa = PBXGroup;
 			children = (
+				5BA7C9681E9238E400D5F315 /* SocialDevSlopes.entitlements */,
 				5BA7C9561E8E2C9300D5F315 /* Model */,
 				5BA7C9571E8E2C9C00D5F315 /* View */,
 				5BA7C9581E8E2CAA00D5F315 /* Controller */,
@@ -152,6 +154,11 @@
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = JZ92YFTR72;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -365,6 +372,7 @@
 			baseConfigurationReference = B3B071F1359331602731B757 /* Pods-SocialDevSlopes.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SocialDevSlopes/SocialDevSlopes.entitlements;
 				DEVELOPMENT_TEAM = JZ92YFTR72;
 				INFOPLIST_FILE = SocialDevSlopes/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -379,6 +387,7 @@
 			baseConfigurationReference = FCAF6E34BFA5172B12B295C4 /* Pods-SocialDevSlopes.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SocialDevSlopes/SocialDevSlopes.entitlements;
 				DEVELOPMENT_TEAM = JZ92YFTR72;
 				INFOPLIST_FILE = SocialDevSlopes/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
