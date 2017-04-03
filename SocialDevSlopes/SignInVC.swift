@@ -36,7 +36,7 @@ class SignInVC: UIViewController {
     
     func firebaseAuthenticate(_ credential: FIRAuthCredential) {
         FIRAuth.auth()?.signIn(with: credential, completion: { (user, error) in
-            guard error != nil else { print("Unable to authenticate with Firebase!" )
+            guard error == nil else { print("Unable to authenticate with Firebase!" )
                                     return }
             print("Succesfully authenticated with firebase")
         })
