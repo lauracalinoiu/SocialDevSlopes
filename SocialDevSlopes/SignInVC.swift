@@ -45,6 +45,21 @@ class SignInVC: UIViewController {
     }
     
     @IBAction func signInTapped(_ sender: UIButton) {
+        if let email = emailField.text, let pass = passField.text {
+            FIRAuth.auth()?.signIn(withEmail: email, password: pass) { (user, error) in
+                guard error == nil else {
+                    FIRAuth.auth()?.createUser(withEmail: email, password: pass) { (user, error) in
+                        if error != nil {
+                            print("Unable to authenticate with Firebase using email")
+                        } else {
+                            print("Succesfully authenticated with Firebase")
+                        }
+                    }
+                    return
+                }
+                print("Email user authenticated with Firebase")
+            }
+        }
     }
  }
 
