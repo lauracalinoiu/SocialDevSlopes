@@ -157,18 +157,36 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2zp-Z0-OmW" customClass="ShadowView" customModule="SocialDevSlopes" customModuleProvider="target">
                                 <rect key="frame" x="16" y="73" width="343" height="65"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.61960784310000006" green="0.63921568630000003" blue="0.69019607839999997" alpha="0.21165988869863014" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="65" id="5fW-dg-Zci"/>
                                 </constraints>
                             </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="61" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7gq-9Q-Km7">
+                                <rect key="frame" x="16" y="146" width="343" height="521"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="61" id="xI7-ie-bCL">
+                                        <rect key="frame" x="0.0" y="28" width="343" height="61"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xI7-ie-bCL" id="8nv-uP-pl6">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="60"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="5mA-Ka-ihG" firstAttribute="top" secondItem="7gq-9Q-Km7" secondAttribute="bottom" id="0PJ-QI-0CX"/>
+                            <constraint firstItem="7gq-9Q-Km7" firstAttribute="top" secondItem="2zp-Z0-OmW" secondAttribute="bottom" constant="8" id="2DK-Jf-eWB"/>
                             <constraint firstItem="No4-cr-n1E" firstAttribute="leading" secondItem="tdu-xE-51r" secondAttribute="leading" id="C06-2j-sRn"/>
                             <constraint firstItem="2zp-Z0-OmW" firstAttribute="leading" secondItem="tdu-xE-51r" secondAttribute="leading" constant="16" id="JPY-uY-8CO"/>
                             <constraint firstItem="2zp-Z0-OmW" firstAttribute="top" secondItem="No4-cr-n1E" secondAttribute="bottom" constant="8" id="K7z-t0-J2A"/>
+                            <constraint firstAttribute="trailing" secondItem="7gq-9Q-Km7" secondAttribute="trailing" constant="16" id="Kjf-Km-2Ik"/>
                             <constraint firstItem="No4-cr-n1E" firstAttribute="top" secondItem="tdu-xE-51r" secondAttribute="top" id="MYm-Dg-6sI"/>
+                            <constraint firstItem="7gq-9Q-Km7" firstAttribute="leading" secondItem="tdu-xE-51r" secondAttribute="leading" constant="16" id="QZv-PO-u9k"/>
                             <constraint firstAttribute="trailing" secondItem="No4-cr-n1E" secondAttribute="trailing" id="sq2-iW-Hkl"/>
                             <constraint firstAttribute="trailing" secondItem="2zp-Z0-OmW" secondAttribute="trailing" constant="16" id="xPa-5o-saG"/>
                         </constraints>
@@ -179,7 +197,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="doZ-4y-FnJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="967.5" y="137.32394366197184"/>
+            <point key="canvasLocation" x="967.20000000000005" y="137.18140929535232"/>
         </scene>
     </scenes>
     <resources>
