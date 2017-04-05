@@ -46,7 +46,8 @@ class SignInVC: UIViewController {
                 return }
             print("Succesfully authenticated with firebase")
             if let user = user {
-                self.completeSignIn(user.uid)
+                let userData = ["provider": credential.provider]
+                self.completeSignIn(user.uid, userData: userData)
             }
         })
     }
@@ -61,7 +62,8 @@ class SignInVC: UIViewController {
                         } else {
                             print("Succesfully authenticated with Firebase")
                             if let user = user {
-                                self.completeSignIn(user.uid)
+                                let userData = ["provider": user.providerID]
+                                self.completeSignIn(user.uid, userData: userData)
                             }
                         }
                     }
@@ -69,13 +71,15 @@ class SignInVC: UIViewController {
                 }
                 print("Email user authenticated with Firebase")
                 if let user = user {
-                    self.completeSignIn(user.uid)
+                    let userData = ["provider": user.providerID]
+                    self.completeSignIn(user.uid, userData: userData)
                 }
             }
         }
     }
     
-    func completeSignIn(_ id: String) {
+    func completeSignIn(_ id: String, userData: [String: String]) {
+        DataService.ds.createFirebaseDBUser(uid: id, userData: userData)
         KeychainWrapper.standard.set(id, forKey: KEY_UID)
         performSegue(withIdentifier: "goToFeed", sender: nil)
     }

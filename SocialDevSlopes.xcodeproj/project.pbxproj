@@ -18,6 +18,7 @@
 		5BA7C96E1E927AF800D5F315 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA7C96D1E927AF800D5F315 /* FeedVC.swift */; };
 		5BA7C9701E94C6F900D5F315 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA7C96F1E94C6F900D5F315 /* CircleView.swift */; };
 		5BA7C9721E94DA5F00D5F315 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA7C9711E94DA5F00D5F315 /* PostCell.swift */; };
+		5BA7C9751E94EB4400D5F315 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA7C9741E94EB4400D5F315 /* DataService.swift */; };
 		B398D25BAE680E5077D10301 /* Pods_SocialDevSlopes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E5AF368F4D17450C6AAF7B8 /* Pods_SocialDevSlopes.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +38,7 @@
 		5BA7C96D1E927AF800D5F315 /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
 		5BA7C96F1E94C6F900D5F315 /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		5BA7C9711E94DA5F00D5F315 /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		5BA7C9741E94EB4400D5F315 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		B3B071F1359331602731B757 /* Pods-SocialDevSlopes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialDevSlopes.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SocialDevSlopes/Pods-SocialDevSlopes.debug.xcconfig"; sourceTree = "<group>"; };
 		FCAF6E34BFA5172B12B295C4 /* Pods-SocialDevSlopes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialDevSlopes.release.xcconfig"; path = "Pods/Target Support Files/Pods-SocialDevSlopes/Pods-SocialDevSlopes.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -74,6 +76,7 @@
 		5B420FD61E8E293B006A257E /* SocialDevSlopes */ = {
 			isa = PBXGroup;
 			children = (
+				5BA7C9731E94EB2800D5F315 /* Services */,
 				5BA7C9681E9238E400D5F315 /* SocialDevSlopes.entitlements */,
 				5BA7C9561E8E2C9300D5F315 /* Model */,
 				5BA7C9571E8E2C9C00D5F315 /* View */,
@@ -113,6 +116,14 @@
 				5BA7C96D1E927AF800D5F315 /* FeedVC.swift */,
 			);
 			name = Controller;
+			sourceTree = "<group>";
+		};
+		5BA7C9731E94EB2800D5F315 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				5BA7C9741E94EB4400D5F315 /* DataService.swift */,
+			);
+			name = Services;
 			sourceTree = "<group>";
 		};
 		96E5038B62445FE39C8A3FB0 /* Pods */ = {
@@ -269,6 +280,7 @@
 				5BA7C96E1E927AF800D5F315 /* FeedVC.swift in Sources */,
 				5B420FD81E8E293B006A257E /* AppDelegate.swift in Sources */,
 				5BA7C96C1E92768A00D5F315 /* Constants.swift in Sources */,
+				5BA7C9751E94EB4400D5F315 /* DataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
