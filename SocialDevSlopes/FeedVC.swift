@@ -18,7 +18,7 @@ class FeedVC: UIViewController {
 
     @IBAction func signoutTapped(_ sender: UIButton) {
         KeychainWrapper.standard.removeObject(forKey: KEY_UID)
-        try! FIRAuth.auth()!.signOut()
+        try? FIRAuth.auth()?.signOut()
         performSegue(withIdentifier: "backToSignin", sender: nil)
     }
 }
