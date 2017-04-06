@@ -2,7 +2,9 @@
 //  CircleView.swift
 //  SocialDevSlopes
 //
-//  Created by Laura Calinoiu on 05/04/2017.
+//  Created by Laura Calinoiu on 05/04/2017.SocialDevSlopes
+Storage
+
 //  Copyright © 2017 Laura Calinoiu. All rights reserved.
 //
 
