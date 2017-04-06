@@ -13,6 +13,7 @@
 		5B420FDF1E8E293B006A257E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B420FDE1E8E293B006A257E /* Assets.xcassets */; };
 		5B420FE21E8E293B006A257E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B420FE01E8E293B006A257E /* LaunchScreen.storyboard */; };
 		5B420FEA1E8E298E006A257E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5B420FE91E8E298E006A257E /* GoogleService-Info.plist */; };
+		5B51EA991E9615D6005B3BF5 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B51EA981E9615D6005B3BF5 /* Post.swift */; };
 		5BA7C96A1E926ADE00D5F315 /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA7C9691E926ADE00D5F315 /* ShadowView.swift */; };
 		5BA7C96C1E92768A00D5F315 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA7C96B1E92768A00D5F315 /* Constants.swift */; };
 		5BA7C96E1E927AF800D5F315 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA7C96D1E927AF800D5F315 /* FeedVC.swift */; };
@@ -32,6 +33,7 @@
 		5B420FE11E8E293B006A257E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5B420FE31E8E293B006A257E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5B420FE91E8E298E006A257E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		5B51EA981E9615D6005B3BF5 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		5BA7C9681E9238E400D5F315 /* SocialDevSlopes.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SocialDevSlopes.entitlements; sourceTree = "<group>"; };
 		5BA7C9691E926ADE00D5F315 /* ShadowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
 		5BA7C96B1E92768A00D5F315 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = ../Constants.swift; sourceTree = "<group>"; };
@@ -82,7 +84,6 @@
 				5BA7C9571E8E2C9C00D5F315 /* View */,
 				5BA7C9581E8E2CAA00D5F315 /* Controller */,
 				5B420FDB1E8E293B006A257E /* Main.storyboard */,
-				5BA7C9711E94DA5F00D5F315 /* PostCell.swift */,
 				5BA7C96B1E92768A00D5F315 /* Constants.swift */,
 				5B420FD71E8E293B006A257E /* AppDelegate.swift */,
 				5B420FDE1E8E293B006A257E /* Assets.xcassets */,
@@ -105,6 +106,7 @@
 			children = (
 				5BA7C9691E926ADE00D5F315 /* ShadowView.swift */,
 				5BA7C96F1E94C6F900D5F315 /* CircleView.swift */,
+				5BA7C9711E94DA5F00D5F315 /* PostCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -114,6 +116,7 @@
 			children = (
 				5B420FD91E8E293B006A257E /* SignInVC.swift */,
 				5BA7C96D1E927AF800D5F315 /* FeedVC.swift */,
+				5B51EA981E9615D6005B3BF5 /* Post.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -279,6 +282,7 @@
 				5B420FDA1E8E293B006A257E /* SignInVC.swift in Sources */,
 				5BA7C96E1E927AF800D5F315 /* FeedVC.swift in Sources */,
 				5B420FD81E8E293B006A257E /* AppDelegate.swift in Sources */,
+				5B51EA991E9615D6005B3BF5 /* Post.swift in Sources */,
 				5BA7C96C1E92768A00D5F315 /* Constants.swift in Sources */,
 				5BA7C9751E94EB4400D5F315 /* DataService.swift in Sources */,
 			);
