@@ -10,16 +10,22 @@ import UIKit
 import SwiftKeychainWrapper
 import Firebase
 
-class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var imageAdd: CircleView!
     
     var posts = [Post]()
+    var imagePicker: UIImagePickerController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        
+        imagePicker = UIImagePickerController()
+        imagePicker.allowsEditing = true
+        imagePicker.delegate = self
         
         DataService.ds.REF_POSTS.observe(.value, with: { (snapshot) in
             if let snapshots = snapshot.children.allObjects as? [FIRDataSnapshot] {
@@ -46,6 +52,10 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         return posts.count
     }
     
+    @IBAction func addImageTapped(_ sender: UITapGestureRecognizer) {
+        present(imagePicker, animated: true, completion: nil)
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "postCell") as? PostCell {
             cell.configureCell(posts[indexPath.row])
@@ -58,5 +68,14 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         KeychainWrapper.standard.removeObject(forKey: KEY_UID)
         try? FIRAuth.auth()?.signOut()
         performSegue(withIdentifier: "backToSignin", sender: nil)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        if let image = info[UIImagePickerControllerEditedImage] as? UIImage {
+            imageAdd.image = image
+        } else {
+            print("select next time a valid image!")
+        }
+        imagePicker.dismiss(animated: true, completion: nil)
     }
 }
